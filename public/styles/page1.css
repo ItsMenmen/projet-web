@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color:black;
 }
 
 #bandeau{
@@ -15,7 +14,6 @@
     
         margin-left: 580px;
         align-items: center;
-        color: #ffffff;
     }
 }
 
@@ -35,9 +33,6 @@
     }
     #recherche{
         display: flex;
-        #site-search{
-            color : white;
-        }
         button{
             display: block;
             background-color: red;
@@ -55,37 +50,35 @@
 }
 
 
-
-#articles{
-    display: flex;
-    justify-content: space-around;
-    padding: 3% 10% 3%;
-    min-width: 30%;
-    flex-wrap: wrap;
-    row-gap: 10px;
-    grid-template-columns: 1fr 1fr  1fr;
-
-
-        article{
-            width: 30%;
-            height: fit-content;
-            justify-content: space-around;
-            background-color: white;
-            border-top: 5px;
-            border: solid 5px white;
-            border-radius: 8px;
-            min-width: 200px;
-            max-width: 400px;
-        }
-        #secimg{
-            display: flex;
-            height: 50%;
-            background-color: burlywood;
+ #tuiles{
+    display: grid;
     
-            img{
-                width: 340px;
-                margin: 6% auto;
-                border-radius: 8px;
-            }
+    .film-tile {
+        margin: auto;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+       }
+       .film-tile img {
+        width: 100%;
+        height: auto;
+       }
+       @media screen and (max-width: 768px) {
+        #tuiles{
+            grid-template-columns: 1fr 1fr 1fr;
+            .film-tile {
+                width: 40%;
+                }
         }
-}
+       }
+       @media screen and (max-width: 1024px) {
+        #tuiles{
+            grid-template-columns: 1fr 1fr 1fr;
+            .film-tile {
+                width: 40%;
+                }
+        }
+        
+       }
+ }
