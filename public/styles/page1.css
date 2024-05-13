@@ -52,7 +52,7 @@
 
  #tuiles{
     display: grid;
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     .film-tile {
         margin: auto;
         background-color: #f9f9f9;
@@ -64,21 +64,21 @@
         width: 100%;
         height: auto;
        }
-       @media screen and (max-width: 768px) {
-        #tuiles{
-            grid-template-columns: 1fr 1fr 1fr;
-            .film-tile {
-                width: 40%;
-                }
-        }
-       }
-       @media screen and (max-width: 1024px) {
-        #tuiles{
-            grid-template-columns: 1fr 1fr 1fr;
-            .film-tile {
-                width: 40%;
-                }
-        }
-        
-       }
- }
+    }
+
+ @media screen and (min-width: 768px) {
+    #tuiles{
+        grid-template-columns: 1fr 1fr 1fr;
+        .film-tile {
+            width: 70%;
+            }
+    }
+   }
+   @media screen and (min-width: 1024px) {
+    #tuiles{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        .film-tile {
+            width: 70%;
+            }
+    }
+   }
