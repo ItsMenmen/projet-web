@@ -238,3 +238,4 @@ const apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + apiKey;
                 });
             })
             .catch(error => console.error('Erreur lors de la requête :', error));
+            
