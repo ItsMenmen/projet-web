@@ -5,7 +5,7 @@ const searchButton = document.querySelector('.bouton');
 
 
 
-
+//if no image found = faire un truc
 
 
 
@@ -77,3 +77,19 @@ function displayMovies(movies) {
     
     
     
+function loadRecentMovies() {
+    const recentMoviesUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=fr-FR&page=1`;
+
+    fetch(recentMoviesUrl)
+        .then(response => response.json())
+        .then(data => {
+            clearResults(); // Vider les résultats précédents
+            displayMovies(data.results); // Afficher les films récents
+        })
+        .catch(error => console.error('Erreur lors de la récupération des films récents :', error));
+}
+// Charger les films récents au démarrage de la page
+document.addEventListener('DOMContentLoaded', loadRecentMovies);
+
+// Charger les genres au démarrage de la page
+document.addEventListener('DOMContentLoaded', loadGenres);

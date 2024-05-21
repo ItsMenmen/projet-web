@@ -11,20 +11,46 @@
         <body>
             
             <header id="bandeau">
-                <img src="public/images/logo.png" alt="">
+                <!--<img src="public/images/logo.png" alt="">-->
                 <h1 id="titre">NetFix</h1>
             </header>
             <nav id="navbar">
-                <div><!--<a href="page2.html" title="page2">--><span>Année</span></a></div>
-                <div><!--<a href="page2.html" title="page2">--><span>Titre</span></a></div>
-                <div><!--<a href="page3forum.html" title="page2">--><span>Genre</span></a></div>
-                <div><!--<a href="page2.html" title="page2">--><span>Acteurs</span></a></div>
                 <section id = "recherche">
                 <input type="search" id="site-search" name="recherche" />
                 <button class="bouton">Search</button>
                 </section>
-
             </nav>
+            <section id="filtres">
+                <h2>Filtres</h2>
+                <form id="filter-form">
+                    <div class="filter-group">
+                        <label for="genre">Genre :</label>
+                            <select id="genre">
+                                <option value="">Tous</option>
+                                <option value="action">Action</option>
+                                <option value="comedy">Comédie</option>
+                                <option value="drama">Drame</option>
+                                <option value="horror">Horreur</option>
+                            </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="year">Année :</label>
+                        <input type="number" id="year" placeholder="2024">
+                    </div>
+                    <div class="filter-group">
+                        <label for="actor">Acteur :</label>
+                        <input type="text" id="actor" placeholder="Nom de l'acteur">
+                    </div>
+                    <div class="filter-group">
+                        <label for="director">Réalisateur :</label>
+                        <input type="text" id="director" placeholder="Nom du réalisateur">
+                    </div>
+                    <div class="boutton">
+                        <button type="button" id="apply-filters">Appliquer les filtres</button>
+                    </div>
+                   
+                </form>
+            </section>
 
             <section id="tuiles">   </section>
             <script src="public/styles/javascript.js"></script>
