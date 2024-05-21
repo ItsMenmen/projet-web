@@ -1,60 +1,41 @@
 <!DOCTYPE html>
-
-    <html lang="fr">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="NetFix">
-            <title>NetFix</title>
-            <link rel="stylesheet" href="public/styles/page1.css">
-        </head>
-        <body>
-            
-            <header id="bandeau">
-                <!--<img src="public/images/logo.png" alt="">-->
-                <h1 id="titre">NetFix</h1>
-            </header>
-            <nav id="navbar">
-                <section id = "recherche">
-                <input type="search" id="site-search" name="recherche" />
-                <button class="bouton">Search</button>
-                </section>
-            </nav>
-            <section id="filtres">
-                <h2>Filtres</h2>
-                <form id="filter-form">
-                    <div class="filter-group">
-                        <label for="genre">Genre :</label>
-                            <select id="genre">
-                                <option value="">Tous</option>
-                                <option value="action">Action</option>
-                                <option value="comedy">Comédie</option>
-                                <option value="drama">Drame</option>
-                                <option value="horror">Horreur</option>
-                            </select>
-                    </div>
-                    <div class="filter-group">
-                        <label for="year">Année :</label>
-                        <input type="number" id="year" placeholder="2024">
-                    </div>
-                    <div class="filter-group">
-                        <label for="actor">Acteur :</label>
-                        <input type="text" id="actor" placeholder="Nom de l'acteur">
-                    </div>
-                    <div class="filter-group">
-                        <label for="director">Réalisateur :</label>
-                        <input type="text" id="director" placeholder="Nom du réalisateur">
-                    </div>
-                    <div class="boutton">
-                        <button type="button" id="apply-filters">Appliquer les filtres</button>
-                    </div>
-                   
-                </form>
-            </section>
-
-            <section id="tuiles">   </section>
-            <script src="public/styles/javascript.js"></script>
-
-        </body>
-    </html>
-    
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NetFix">
+    <title>NetFix</title>
+    <link rel="stylesheet" href="public/styles/page1.css">
+</head>
+<body>
+    <header id="bandeau">
+        <!--<img src="public/images/logo.png" alt="">-->
+        <h1 id="titre">NetFix</h1>
+    </header>
+    <nav id="navbar">
+        <section id="recherche">
+            <input type="search" id="site-search" name="recherche" />
+            <button class="bouton">Search</button>
+        </section>
+    </nav>
+    <section id="filtres">
+        <label for="genre-select">Choisissez un genre :</label>
+        <select id="genre-select" aria-label="Sélectionner un genre">
+            <option value="">Sélectionner un genre</option>
+            <!-- Ajoutez d'autres options de genres ici -->
+        </select>
+        <label for="year-select">Choisissez une année :</label>
+        <select id="year-select" aria-label="Sélectionner une année">
+            <option value="">Sélectionner une année</option>
+            <!-- Années à ajouter dynamiquement par JavaScript -->
+        </select>
+        <label for="actor-input">Entrez un acteur :</label>
+        <input type="text" id="actor-input" aria-label="Entrer un acteur" placeholder="Entrez un acteur">
+        <label for="director-input">Entrez un réalisateur :</label>
+        <input type="text" id="director-input" aria-label="Entrer un réalisateur" placeholder="Entrez un réalisateur">
+        <button id="genre-button" aria-label="Filtrer">Filtrer</button>
+    </section>
+    <section id="tuiles"></section>
+    <script src="public/styles/javascript.js"></script>
+</body>
+</html>
