@@ -53,16 +53,16 @@
  #tuiles{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    .film-tile {
-        margin: auto;
+    div{
+        height: 600px;
+        margin: 10px;
         background-color: #f9f9f9;
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 10px;
-       }
-       .film-tile img {
-        width: 100%;
-        height: auto;
+        img{
+            width: 95%;
+        }
        }
     }
 
